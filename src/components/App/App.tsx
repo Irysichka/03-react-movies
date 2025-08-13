@@ -1,4 +1,4 @@
-import { SearchBar } from "../SearchBar/SearchBar"
+import  SearchBar from "../SearchBar/SearchBar"
 import css from "./App.module.css"
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from 'react'
