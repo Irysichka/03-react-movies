@@ -1,7 +1,8 @@
 import css from "./MovieGrid.module.css"
 import { Movie } from "../../types/movie"
-import { getImageUrl } from "../../services/movieService";
 
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/";
+const IMAGE_SIZE = "original";
 
 interface MovieGridProps {
   movies: Movie[];
@@ -30,4 +31,9 @@ export function MovieGrid({movies, onSelect}: MovieGridProps) {
         </li>);
     })}
   </ul>;
+}
+
+function getImageUrl(path: string) {
+  if (!path) return null;
+  return `${IMAGE_BASE_URL}${IMAGE_SIZE}${path}`;
 }
